@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2f6f5e">
+  <title>Mis Gastos</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Mis Gastos</h1>
+    <input type="month" id="mes" aria-label="Mes">
+  </header>
+
+  <main>
+    <section class="card resumen">
+      <div>
+        <span class="etiqueta">Total del mes</span>
+        <strong id="total">0,00</strong>
+      </div>
+      <div>
+        <span class="etiqueta">Movimientos</span>
+        <strong id="cantidad">0</strong>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 id="form-titulo">Nuevo gasto</h2>
+      <form id="form">
+        <input type="hidden" id="id">
+        <label>Monto
+          <input type="number" id="monto" step="0.01" min="0.01" inputmode="decimal" required>
+        </label>
+        <label>Categoría
+          <select id="categoria" required></select>
+        </label>
+        <label>Fecha
+          <input type="date" id="fecha" required>
+        </label>
+        <label class="ancho">Descripción
+          <input type="text" id="descripcion" maxlength="100" placeholder="Opcional">
+        </label>
+        <div class="acciones ancho">
+          <button type="submit" id="guardar">Agregar</button>
+          <button type="button" id="cancelar" class="secundario" hidden>Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Por categoría</h2>
+      <ul id="categorias" class="barras"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Movimientos</h2>
+      <ul id="lista" class="lista"></ul>
+      <p id="vacio" class="vacio">No hay gastos este mes.</p>
+    </section>
+
+    <section class="card">
+      <h2>Datos</h2>
+      <p class="nota">Tus gastos se guardan solo en este dispositivo. Exporta una copia de vez en cuando.</p>
+      <div class="acciones">
+        <button type="button" id="exportar-csv" class="secundario">Exportar CSV</button>
+        <button type="button" id="exportar-json" class="secundario">Copia de seguridad</button>
+        <label class="boton secundario">Restaurar
+          <input type="file" id="importar" accept=".json,application/json" hidden>
+        </label>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
