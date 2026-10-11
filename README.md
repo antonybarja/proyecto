@@ -1,6 +1,6 @@
 # Mis Gastos
 
-App personal para registrar gastos, para Android (APK) y para el navegador. Sin servidor ni cuentas: los datos se guardan solo en el dispositivo.
+App personal para registrar gastos, para iPhone, Android (APK) y el navegador. Sin servidor ni cuentas: los datos se guardan solo en el dispositivo.
 
 ## Funciones
 
@@ -10,7 +10,19 @@ App personal para registrar gastos, para Android (APK) y para el navegador. Sin 
 - Copia de seguridad y restauración en JSON
 - Funciona sin conexión
 
-## Descargar el APK
+## Instalar en iPhone
+
+La app se publica en GitHub Pages: https://antonybarja.github.io/proyecto/
+
+1. Abre ese enlace en **Safari** (tiene que ser Safari).
+2. Toca el botón **Compartir** (cuadrado con flecha hacia arriba).
+3. Elige **Añadir a pantalla de inicio** → **Añadir**.
+
+Queda un ícono "Gastos" que abre la app a pantalla completa y funciona sin internet.
+
+> Los datos se guardan en el iPhone. Si borras la app de la pantalla de inicio se pierden, así que usa **Copia de seguridad** de vez en cuando (puedes guardarla en Archivos o iCloud Drive).
+
+## Descargar el APK (Android)
 
 GitHub Actions compila el APK automáticamente con cada push:
 
@@ -28,6 +40,7 @@ También puedes lanzarlo a mano con **Run workflow**.
 - `www/` — la app (HTML, CSS y JavaScript sin dependencias)
 - `capacitor.config.json` — configuración de [Capacitor](https://capacitorjs.com/), que convierte la web en app Android
 - `.github/workflows/apk.yml` — compila el APK
+- `.github/workflows/pages.yml` — publica la app en GitHub Pages (para iPhone)
 
 ## Desarrollo
 
