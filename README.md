@@ -4,8 +4,10 @@ App personal para registrar gastos, para iPhone, Android (APK) y el navegador. S
 
 ## Funciones
 
-- Agregar, editar y eliminar gastos (monto, categoría, fecha, descripción)
-- Ver el total del mes y el reparto por categoría
+- Agregar, editar y eliminar gastos (monto, categoría, medio de pago, fecha, descripción)
+- Medios de pago: Yape, Plin, transferencia, tarjeta de débito, tarjeta de crédito y efectivo
+- Montos en soles (S/)
+- Ver el total del mes y el reparto por medio de pago y por categoría
 - Exportar a CSV (para Excel / Google Sheets)
 - Copia de seguridad y restauración en JSON
 - Funciona sin conexión
@@ -21,6 +23,23 @@ La app se publica en GitHub Pages: https://antonybarja.github.io/proyecto/
 Queda un ícono "Gastos" que abre la app a pantalla completa y funciona sin internet.
 
 > Los datos se guardan en el iPhone. Si borras la app de la pantalla de inicio se pierden, así que usa **Copia de seguridad** de vez en cuando (puedes guardarla en Archivos o iCloud Drive).
+
+### Registro rápido con Atajos
+
+La app acepta datos en el enlace, así que un Atajo puede abrirla con el formulario ya rellenado:
+
+```
+https://antonybarja.github.io/proyecto/?monto=25.50&metodo=Yape&cat=Comida&desc=Almuerzo
+```
+
+Ejemplo de Atajo "Anotar Yape":
+
+1. App **Atajos** → **+** → acción **Pedir entrada** (tipo Número, pregunta "¿Cuánto?").
+2. Acción **URL**: `https://antonybarja.github.io/proyecto/?metodo=Yape&monto=` y al final la variable *Entrada proporcionada*.
+3. Acción **Abrir URL**.
+4. Añádelo a la pantalla de inicio o asígnalo al **botón de Acción** del iPhone (Ajustes → Botón de Acción → Atajo).
+
+Así, después de yapear, pulsas el botón, escribes el monto y confirmas con **Agregar**.
 
 ## Descargar el APK (Android)
 

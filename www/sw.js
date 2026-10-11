@@ -1,4 +1,4 @@
-const CACHE = 'mis-gastos-v2';
+const CACHE = 'mis-gastos-v3';
 const ARCHIVOS = ['./', 'index.html', 'styles.css', 'app.js', 'manifest.json', 'icon.svg', 'icon-180.png'];
 
 self.addEventListener('install', (e) => {

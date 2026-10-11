@@ -24,7 +24,7 @@
     <section class="card resumen">
       <div>
         <span class="etiqueta">Total del mes</span>
-        <strong id="total">0,00</strong>
+        <strong id="total">S/ 0.00</strong>
       </div>
       <div>
         <span class="etiqueta">Movimientos</span>
@@ -42,6 +42,9 @@
         <label>Categoría
           <select id="categoria" required></select>
         </label>
+        <label>Pagado con
+          <select id="metodo" required></select>
+        </label>
         <label>Fecha
           <input type="date" id="fecha" required>
         </label>
@@ -53,6 +56,11 @@
           <button type="button" id="cancelar" class="secundario" hidden>Cancelar</button>
         </div>
       </form>
+    </section>
+
+    <section class="card">
+      <h2>Por medio de pago</h2>
+      <ul id="metodos" class="barras"></ul>
     </section>
 
     <section class="card">
